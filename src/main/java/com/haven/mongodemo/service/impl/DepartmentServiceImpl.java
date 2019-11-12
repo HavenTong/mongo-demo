@@ -43,4 +43,10 @@ public class DepartmentServiceImpl implements DepartmentService {
         this.departmentRepository.deleteById(id);
         return id;
     }
+
+    @Override
+    public List<Department> createMultiDepartments(List<Department> departments) {
+        this.departmentRepository.insert(departments);
+        return departments;
+    }
 }

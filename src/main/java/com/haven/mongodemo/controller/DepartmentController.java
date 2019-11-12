@@ -38,4 +38,9 @@ public class DepartmentController {
     public String deleteDepartment(@PathVariable("id") String id){
         return this.departmentService.deleteDepartment(id);
     }
+
+    @RequestMapping(value = "/many", method = RequestMethod.POST)
+    public List<Department> createMultiDepartments(@RequestBody List<Department> departments){
+        return this.departmentService.createMultiDepartments(departments);
+    }
 }
