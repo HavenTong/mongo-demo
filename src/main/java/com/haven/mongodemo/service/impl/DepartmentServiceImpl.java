@@ -49,4 +49,14 @@ public class DepartmentServiceImpl implements DepartmentService {
         this.departmentRepository.insert(departments);
         return departments;
     }
+
+    @Override
+    public List<Department> getDepartmentByName(String name) {
+        return this.departmentRepository.findDepartmentByName(name);
+    }
+
+    @Override
+    public Department getDepartmentByEmployeeName(String employeeName) {
+        return this.departmentRepository.findDepartmentByEmployeeName(employeeName);
+    }
 }

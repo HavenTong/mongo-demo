@@ -19,4 +19,8 @@ public interface DepartmentService {
      String deleteDepartment(String id);
 
      List<Department> createMultiDepartments(List<Department> departments);
+
+     List<Department> getDepartmentByName(String name);
+
+     Department getDepartmentByEmployeeName(String employeeName);
 }

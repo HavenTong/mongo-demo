@@ -43,4 +43,14 @@ public class DepartmentController {
     public List<Department> createMultiDepartments(@RequestBody List<Department> departments){
         return this.departmentService.createMultiDepartments(departments);
     }
+
+    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
+    public List<Department> getDepartmentByName(@PathVariable("name") String name){
+        return this.departmentService.getDepartmentByName(name);
+    }
+
+    @RequestMapping(value = "/emp/{employee_name}", method = RequestMethod.GET)
+    public Department getDepartmentByEmployeeName(@PathVariable("employee_name") String employeeName){
+        return this.departmentService.getDepartmentByEmployeeName(employeeName);
+    }
 }
