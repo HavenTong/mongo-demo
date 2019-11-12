@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * @author HavenTong
  * @date 2019/11/12 4:58 下午
@@ -22,5 +24,10 @@ public class DepartmentServiceImpl implements DepartmentService {
     public Department createDepartment(Department department) {
         this.departmentRepository.save(department);
         return department;
+    }
+
+    @Override
+    public List<Department> listDepartments() {
+        return this.departmentRepository.findAll();
     }
 }
