@@ -10,9 +10,13 @@ import java.util.List;
  */
 public interface DepartmentService {
 
-    public Department createDepartment(Department department);
+     Department createDepartment(Department department);
 
-    public List<Department> listDepartments();
+     List<Department> listDepartments();
 
-    public Department updateDepartment(Department department, String id);
+     Department updateDepartment(Department department, String id);
+
+     String deleteDepartment(String id);
+
+     
 }

@@ -33,4 +33,9 @@ public class DepartmentController {
                                        @PathVariable("id") String id){
         return this.departmentService.updateDepartment(department, id);
     }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public String deleteDepartment(@PathVariable("id") String id){
+        return this.departmentService.deleteDepartment(id);
+    }
 }
