@@ -14,4 +14,5 @@ public interface DepartmentService {
 
     public List<Department> listDepartments();
 
+    public Department updateDepartment(Department department, String id);
 }

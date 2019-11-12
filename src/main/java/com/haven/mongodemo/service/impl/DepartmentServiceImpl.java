@@ -30,4 +30,11 @@ public class DepartmentServiceImpl implements DepartmentService {
     public List<Department> listDepartments() {
         return this.departmentRepository.findAll();
     }
+
+    @Override
+    public Department updateDepartment(Department department, String id) {
+        department.setDepartmentId(id);
+        this.departmentRepository.save(department);
+        return department;
+    }
 }

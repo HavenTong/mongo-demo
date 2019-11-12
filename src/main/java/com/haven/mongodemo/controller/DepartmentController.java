@@ -27,4 +27,10 @@ public class DepartmentController {
     public List<Department> listDepartments(){
         return this.departmentService.listDepartments();
     }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+    public Department updateDepartment(@RequestBody Department department,
+                                       @PathVariable("id") String id){
+        return this.departmentService.updateDepartment(department, id);
+    }
 }
