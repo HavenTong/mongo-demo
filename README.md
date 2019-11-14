@@ -25,6 +25,53 @@ public class DeptTemplateRepository {
 
 
 
+## Domain
+
+- Employee
+
+```java
+/**
+ * @author HavenTong
+ * @date 2019/11/12 16:49 
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Document(collection = "employee")
+public class Employee {
+
+    @Id
+    private String employeeId;
+    private String name;
+    private Integer age;
+    private Double salary;
+}
+```
+
+- Department
+
+```java
+/**
+ * @author HavenTong
+ * @date 2019/11/12 16:52 
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Document(collection = "dept")
+public class Department {
+    @Id
+    String departmentId;
+
+    @Indexed(name = "deptName")
+    private String name;
+    private String description;
+
+    private List<Employee> employees;
+}
+
+```
+
 
 
 
