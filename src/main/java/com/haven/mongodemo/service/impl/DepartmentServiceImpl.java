@@ -2,6 +2,7 @@ package com.haven.mongodemo.service.impl;
 
 import com.haven.mongodemo.domain.Department;
 import com.haven.mongodemo.repository.DepartmentRepository;
+import com.haven.mongodemo.repository.DeptTemplateRepository;
 import com.haven.mongodemo.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,8 @@ import java.util.List;
 public class DepartmentServiceImpl implements DepartmentService {
 
     @Autowired
-    private DepartmentRepository departmentRepository;
+//    private DepartmentRepository departmentRepository;
+    private DeptTemplateRepository departmentRepository;
 
     @Override
     public Department createDepartment(Department department) {
